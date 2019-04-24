@@ -1,0 +1,11 @@
+start,end,type,name
+5,43,circ,circ_009
+5,43,gene,NMT43
+5,23,exon,NMT43
+23,32,intron,NMT43
+32,43,exon,NMT43
+50,120,circ,circ_010
+50,70,exon,NMT46
+70,90,exon,NMT46
+97,108,intron,NMT46
+110,130,exon,NMT46

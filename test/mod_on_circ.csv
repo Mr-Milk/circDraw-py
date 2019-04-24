@@ -1,0 +1,14 @@
+start,end,type,name
+1,100,circ,hsa_circ_0001
+1,20,exon,NSF1
+45,69,exon,NSF2
+75,86,intron,NSFi
+93,120,exon,NSF3
+18,19,m6A,h
+46,47,m5C,h
+79,80,m1A,l
+95,96,pU,l
+54,55,2OMe,l
+8,14,MRE,mua
+52,65,ORF,mua
+79,84,RBP,mua
