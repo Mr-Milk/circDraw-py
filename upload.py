@@ -24,7 +24,7 @@ filenames, filetypes, species = get_parameters(sys.argv)
 uploads = zip(filenames, filetypes, species)
 
 
-url_base = "http://www.circdraw.com:8000"
+url_base = "http://www.circdraw.com"
 url = url_base + '/tools/upload/'
 
 for up in uploads:
