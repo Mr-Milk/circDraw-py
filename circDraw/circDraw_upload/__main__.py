@@ -1,7 +1,7 @@
 import sys
 from .upload import upload_function
 #from .draw import circDraw
-
+import os
 import argparse
 
 def main():
@@ -34,6 +34,8 @@ def main():
             #assert args.species == None, "Do not mix -i flag with -s --speciesflag..."
             print("CircDraw: Using file as input for upload... ")
             filenames, filetypes, input_species = [], [], []
+            print("args.initfile: ",args.initfile)
+            print("Current dir:",os.getcwd())
             with open(args.initfile) as f:
                 line = f.readline()
                 line_num = 1
@@ -49,8 +51,11 @@ def main():
                     input_species.append(species_box[info_file[2]])
                     line = f.readline()
                     line_num += 1
+            ### .initfile must be in the same directory with the data file
+            os.chdir("/".join(args.initfile.split("/")[:-1]))
+
         except FileNotFoundError as e:
-            print("CircDraw Error: File '{}' not found, recheck your parameter after -i...".format(args.initfile))
+            print("CircDraw Error: File '{}' not found, recheck your parameter after -i: {}".format(args.initfile, e))
             print("Abort!")
             exit()
         except AssertionError as e2:
@@ -77,13 +82,14 @@ def main():
     ###### final check before sent:
     for i in zip(filenames, filetypes, input_species):
         try:
+            print(i[0])
             with open(i[0]) as f:
                 content = f.read()
                 assert content != '', "Upload file '{} is empty!'".format(i[0])
             assert i[1] in filetype_box, "Filetype '{}' is not supported. Use -h to find supported file type.".format(i[1])
             assert i[2] in list(species_box.values()), "Species type '{}' is not supported. Use -h to find supported species type.".format(i[2])
         except FileNotFoundError as e_final:
-            print("CircDraw Error: File '{}' not found, recheck your parameter after -i...".format(args.initfile))
+            print("CircDraw Error: File '{}' not found for upload".format(i[0]))
             print("Abort!")
             exit()
         except AssertionError as e2_final:
