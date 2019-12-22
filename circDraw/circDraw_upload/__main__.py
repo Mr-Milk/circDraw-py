@@ -34,9 +34,8 @@ def main():
             #assert args.species == None, "Do not mix -i flag with -s --speciesflag..."
             print("CircDraw: Using file as input for upload... ")
             filenames, filetypes, input_species = [], [], []
-            print("args.initfile: ",args.initfile)
-            print("Current dir:",os.getcwd())
-            with open(args.initfile) as f:
+            initfile_final = os.getcwd() + '/' + args.initfile
+            with open(initfile_final) as f:
                 line = f.readline()
                 line_num = 1
                 while line:
@@ -52,7 +51,7 @@ def main():
                     line = f.readline()
                     line_num += 1
             ### .initfile must be in the same directory with the data file
-            os.chdir("/".join(args.initfile.split("/")[:-1]))
+            os.chdir("/".join(initfile_final.split("/")[:-1]))
 
         except FileNotFoundError as e:
             print("CircDraw Error: File '{}' not found, recheck your parameter after -i: {}".format(args.initfile, e))
