@@ -37,7 +37,7 @@ cd.mod_on_circ('Your file')
 
 ### API
 
-#####circ_on_chr
+##### circ_on_chr
 
 ```python
 circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, size=(10, 5))
@@ -65,7 +65,7 @@ circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, siz
 
 - Size: (Length, Width) the size of the plot.
 
-#####mod_on_circ
+##### mod_on_circ
 
 ```python
 circDraw.mod_on_circ(self, file, dpi=100, save='png', show=True, size=(7, 7), sep_mod=False)
