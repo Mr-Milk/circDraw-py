@@ -4,7 +4,7 @@ This tool servers as a command line tool for uploading files to circDraw server 
 
 ## Install
 
-This tool is installed automatically as part of circDraw-clt, please refer to the `Install` section on the [README.md](../../README.md) of the whole project.
+This tool is installed automatically as part of circDraw-clt, please refer to the `Install` section on the [README.md](https://github.com/Mr-Milk/circDraw-py) of the whole project.
 
 ## Usage
 
