@@ -32,7 +32,7 @@ def main():
             #assert args.file == None, "Do not mix -i flag with -f or --file flag..."
             #assert args.type == None, "Do not mix -i flag with -t or --type flag..."
             #assert args.species == None, "Do not mix -i flag with -s --speciesflag..."
-            print("CircDraw: Using file as input for upload... ")
+            print("CircDraw: Using file as input for uploading... ")
             filenames, filetypes, input_species = [], [], []
             initfile_final = os.getcwd() + '/' + args.initfile
             with open(initfile_final) as f:
@@ -81,7 +81,6 @@ def main():
     ###### final check before sent:
     for i in zip(filenames, filetypes, input_species):
         try:
-            print(i[0])
             with open(i[0]) as f:
                 content = f.read()
                 assert content != '', "Upload file '{} is empty!'".format(i[0])

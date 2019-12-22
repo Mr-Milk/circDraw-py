@@ -8,7 +8,38 @@ This tool is installed automatically as part of circDraw-clt, please refer to th
 
 ## Usage
 
-### 
+### Upload on command line
+#### Upload files with parameters
+- Sinle upload file
+```bash
+$ circDraw-upload -f test_circfile.bed -t BED -s human-hg19
+```
+
+![](/src/circDraw-upload-fts-single.png)
+
+
+- Multiple upload files
+```bash
+$ circDraw-upload -f test_circfile.bed -t BED -s human-hg19 -f test_circfile.bed -t BED -s human-hg19
+```
+
+![](/src/circDraw-upload-fts-multiple.png)
+
+#### Upload file with init file
+- Single upload file
+```bash
+$ circDraw-upload -i test_init_single.txt
+```
+
+![](/src/circDraw-upload-i-single.png)
+
+- Multiple upload files
+```bash
+$ circDraw-upload -i test_init_multiple.txt
+```
+![](/src/circDraw-upload-i-multiple.png)
+
+
 
 
 
