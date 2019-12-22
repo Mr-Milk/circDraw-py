@@ -103,5 +103,11 @@ optional arguments:
 ```
 
 ## Dependancy
-## About
+- argparse==1.4.0+  https://pypi.org/project/argparse/
+- requests==2.22.0+ https://pypi.org/project/requests/
+
+## More information
+This a part of circDraw project. Please visit our [Contact](https://www.circdraw.com/information/about) page if you have any questions.
+
+**Copyright**: Qu Lab, School of Life Science, Sun Yat-sen University, Guangzhou, CHINA.
 
