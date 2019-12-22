@@ -1,1 +1,1 @@
-/Users/tianqinli/Documents/circDraw_file/test_copy.bed.txt,BED,human-hg19
+test_copy.bed.txt,BED,human-hg19
