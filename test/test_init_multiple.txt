@@ -1,0 +1,3 @@
+test_circfile.bed,BED,human-hg19
+test_circfile.bed,BED,human-hg38
+test_circfile.bed,BED,human-hg38

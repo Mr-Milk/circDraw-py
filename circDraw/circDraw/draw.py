@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-name = "circDraw"
+#name = "circDraw"
 
 import numpy as np
 import matplotlib
