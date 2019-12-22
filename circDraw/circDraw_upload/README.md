@@ -16,6 +16,33 @@ This tool is installed automatically as part of circDraw-clt, please refer to th
 ```bash
 $ circDraw-upload -h
 $ circDraw-upload --help
+
+usage: circDraw-upload [-h] [-f FILE] [-t {BED,CIRI}]
+                       [-s {human-hg19,human-hg38,mouse-mm10,rat-rn6,yeast-sacCer3,zebra-fish-danRer11}]
+                       [-i INITFILE]
+
+Upload command line interface for circDraw web server.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  Filename you want to upload.
+  -t {BED,CIRI}, --type {BED,CIRI}
+                        Filetype of your file, circDraw currently supports
+                        ['BED', 'CIRI']. Names of the selected file type
+                        should be exactly matched.
+  -s {human-hg19,human-hg38,mouse-mm10,rat-rn6,yeast-sacCer3,zebra-fish-danRer11}, --species {human-hg19,human-hg38,mouse-mm10,rat-rn6,yeast-sacCer3,zebra-fish-danRer11}
+                        Specify your species, currently circDraw support
+                        ['human-hg19', 'human-hg38', 'mouse-mm10', 'rat-rn6',
+                        'yeast-sacCer3', 'zebra-fish-danRer11']. Names of the
+                        species should be exactly matched.
+  -i INITFILE, --initfile INITFILE
+                        header filename which specify the information of
+                        uploaded filename, uploaded filetype and corresponding
+                        species; File should be in csv format where each row
+                        represents a file, and three column should be
+                        (filename, filetype, species). Note that this mode
+                        overwrites any '-f', '-t', '-s' input.
+
 ```
 
 ## Dependancy
