@@ -3,8 +3,8 @@
 
 This is a stand alone project which extends the power of circDraw service to command line users. To better connect with the upsteam pipline, we create a python3 package for generating publication level circular RNA with emphasis on the best way to display backsplite sites and epigenomic/genetic information. And to further convenience users to upload data to our circDraw webservice directly from command line, an uploading command line inferface is also avaiable. Overall, this repo contains the following:
 
-1. Python package for circDraw [visualization](https://github.com/Mr-Milk/circDraw-py/blob/master/README.md#draw-with-circdraw)
-2. circDraw [upload command line tool](https://github.com/Mr-Milk/circDraw-py#upload-to-circdraw-webservice) for webservice
+1. Python package for circDraw [visualization](https://github.com/Mr-Milk/circDraw-py/blob/master/README.md#usage-draw-with-circdraw)
+2. circDraw [upload command line tool](https://github.com/Mr-Milk/circDraw-py/blob/master/README.md#usage-upload-to-circdraw-webservice) for webservice
 
 
 
