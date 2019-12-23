@@ -164,13 +164,15 @@ Upload filename | Upload file type | Origin species
 --- | --- | ---
  | | 
 
-__Note__: Currently circDraw only supports limited filetype and species, they are specified in the following table:
+__Note__: Currently circDraw only supports limited filetypes and species, they are specified in the following table:
+- Supported file types:
 
 Uploaded file type | Represent string | Description
 --- | --- | ---
 _.BED_ | 'BED' | BED (Browser Extensible Data) format provides a flexible way to define the data lines that are displayed in an annotation track. BED lines have three required fields for each line: chrom, chromStart, chromEnd. For more information about BED format we accepted, please visit our example in circDraw [upload](https://www.circdraw.com/tools/) page.
 _.CIRI_ | 'CIRI' | Output file from 'Gao, Y., Wang, J. & Zhao, F. CIRI: an efficient and unbiased algorithm for de novo circular RNA identification. Genome Biol 16, 4 (2015) doi:10.1186/s13059-014-0571-3'
 
+- Supported Species
 
 Species | Represent string | Description
 --- | --- | ---
