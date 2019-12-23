@@ -1,4 +1,5 @@
 # circDraw
+[![PyPI version](https://badge.fury.io/py/circDraw.svg)](https://badge.fury.io/py/circDraw)
 
 A python package for circDraw visualization
 
