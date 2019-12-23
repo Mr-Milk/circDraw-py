@@ -27,7 +27,7 @@ pip3 install requests
 
 
 
-## 1. Draw with circDraw
+## Usage: Draw with circDraw
 
 ```python
 from circDraw import circDraw
@@ -139,7 +139,7 @@ A dictionary of colors match with the modification. You can change any one of th
 
 
 
-## 2. Upload to circDraw webservice
+## Usage: Upload to circDraw webservice
 ### Upload on command line
 #### Upload files with parameters
 - Sinle upload file
