@@ -141,7 +141,7 @@ A dictionary of colors match with the modification. You can change any one of th
 
 ## Usage: Upload to circDraw webservice
 ### Upload on command line
-#### Upload files with parameters
+#### 1. Upload files with parameters
 - Sinle upload file
 ```bash
 $ circDraw-upload -f test_circfile.bed -t BED -s human-hg19
