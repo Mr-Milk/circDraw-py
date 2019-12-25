@@ -56,9 +56,9 @@ cd.circ_on_chr('Your file')
 cd.mod_on_circ('Your file')
 ```
 
-<img src='circDraw.png' width='85%'>
+<img src='/src/circDraw.png' width='85%'>
 
-<img src='hsa_circ_0001.png' width='65%'>
+<img src='/src/hsa_circ_0001.png' width='65%'>
 
 ### API
 
