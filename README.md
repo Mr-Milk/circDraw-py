@@ -1,4 +1,4 @@
-# circDraw
+# circDraw-py
 [![PyPI version](https://badge.fury.io/py/circDraw.svg)](https://badge.fury.io/py/circDraw)
 
 This is a stand alone project which extends the power of circDraw service to command line users. To better connect with the upsteam pipline, we create a python3 package for generating publication level circular RNA with emphasis on the best way to display backsplite sites and epigenomic/genetic information. And to further convenience users to upload data to our circDraw webservice directly from command line, an uploading command line inferface is also avaiable. Overall, this repo contains the following:
