@@ -142,7 +142,7 @@ A dictionary of colors match with the modification. You can change any one of th
 ## Usage: Upload to circDraw webservice
 ### Upload on command line
 #### 1. Upload files with parameters
-- Sinle upload file
+- Single upload file
 ```bash
 $ circDraw-upload -f test_circfile.bed -t BED -s human-hg19
 ```
@@ -158,7 +158,7 @@ $ circDraw-upload -f test_circfile.bed -t BED -s human-hg19 -f test_circfile.bed
 ![](/src/circDraw-upload-fts-multiple.png)
 
 #### 2. Upload file with init file
-circDraw-upload also supports upload file from one init file to avoid tedious typing through command line. You can specify the uploaded filename, file type and its origin species in a single csv file. The cvs file should follow the following format with "," seperate each column:
+circDraw-upload also supports upload file from one init file to avoid tedious typing through command line. You can specify the uploaded filename, file type and its origin species in a single csv file. The cvs file should follow the following format with "," seperating each column:
 
 Upload filename | Upload file type | Origin species
 --- | --- | ---
