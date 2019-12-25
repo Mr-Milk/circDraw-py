@@ -10,20 +10,27 @@ This is a stand alone project which extends the power of circDraw service to com
 
 ## Installation
 
+### Install via pip
+
 ```shell
 pip3 install circDraw
+```
+### Install via source code
 
-# install dependencies
-pip3 install numpy
-pip3 install matplotlib
-pip3 install colour
-pip3 install requests
+Clone the github repo or unzip the source code, run the following command at the root of 'circDraw-py' directory:
+
+```shell
+bash install.sh
 ```
 
-- Python3
+
+
+### Dependency
+- Python3.X
 - Matplotlib
 - Numpy
 - Colour
+- Requests
 
 
 

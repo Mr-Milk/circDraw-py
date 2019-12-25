@@ -107,3 +107,5 @@ test-env/
 # mypy
 .mypy_cache/
 
+# VS code
+.DS_Store
