@@ -12,10 +12,11 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Mr-Milk/circDraw-py",
-    packages=['circDraw_upload'],
+    packages=['circDraw_upload', 'circDraw'],
     entry_points = {
         'console_scripts':[
-            'circDraw-upload = circDraw_upload.__main__:main'
+            'circDraw-upload = circDraw_upload.__main__:main',
+            'circDraw = circDraw.__main__:main',
             ]
         },
     classifiers=[
