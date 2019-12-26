@@ -234,15 +234,15 @@ class circDraw:
         ax.add_patch(sec)
 
     def __draw_mod(self, ax, where, r, kind):
+        # opt : [shape, size, color, rotation_angle]
         opt = {'m6a': ['\u25CF', 8, self.__mod_color['m6a'], 0],  # circle
-               # triangle
-               'm5c': ['\u25B2', 8, self.__mod_color['m5c'], 180-where],
-               'm1a': ['\u25A0', 8, self.__mod_color['m1a'], 90-where],  # square
-               'pu': ['\u002B', 8, self.__mod_color['pu'], 90-where],  # plus sign
-               '2ome': ['\u2726', 10, self.__mod_color['2ome'], 90-where]}  # star
+               'm5c': ['\u25B2', 8, self.__mod_color['m5c'], 90+where+3], # tri
+               'm1a': ['\u25A0', 8, self.__mod_color['m1a'], where+3],  # square
+               'pu': ['\u002B', 8, self.__mod_color['pu'], where+3],  # plus sign
+               '2ome': ['\u2726', 10, self.__mod_color['2ome'], where]}  # star
 
-        x = self.__circ_center[0] + r*np.sin(np.radians(where))
-        y = self.__circ_center[1] + r*np.cos(np.radians(where))
+        x = self.__circ_center[0] + r*np.cos(np.radians(where))
+        y = self.__circ_center[1] + r*np.sin(np.radians(where))
         aes = opt[kind]
         ax.text(x, y, aes[0], fontsize=aes[1], color=aes[2],
                 horizontalalignment='center', verticalalignment='center', rotation=aes[3], alpha=0.85)
@@ -286,9 +286,13 @@ class circDraw:
                         p = 0
                 else:
                     pass
-
+        
+        # sorted exons/introns from start to end
         exons = sorted([[int(x[0]), int(x[1])] + x[2:]
                         for x in data['exon'] + data['intron']], key=lambda x: x[0])
+        
+        #print(exons)
+        
         circs_components, circ_ran = [], 0
         for circ in data['circ']:
             start, end = int(circ[0]), int(circ[1])
@@ -298,13 +302,13 @@ class circDraw:
                          'exons': []}
             for exon in exons:
                 e_start, e_end = int(exon[0]), int(exon[1])
-                if e_start < start & e_end > start:
+                if (e_start < start) & (e_end > start):
                     exon[0] = start
-                elif start <= e_start & e_end <= end:
+                elif (start <= e_start) & (e_end <= end):
                     pass
-                elif e_start < end & end < e_end:
+                elif (e_start < end) & (end < e_end):
                     exon[1] = end
-                elif e_start < start & e_end > end:
+                elif (e_start < start) & (e_end > end):
                     exon[0] = start
                     exon[1] = end
                 e_start, e_end = int(exon[0]), int(exon[1])
@@ -313,9 +317,13 @@ class circDraw:
 
                 for mod in data['mod']:
                     mod_start, mod_end = int(mod[0]), int(mod[1])
-                    if mod_start >= e_start & mod_end <= e_end:
+
+                    if (mod_start >= e_start) & (mod_end <= e_end):
                         mod[0], mod[1] = mod_start, mod_end
                         exon[-1].append(mod)
+                
+                #print(exon)
+                
                 circ_info['exons'].append(exon)
 
             circs_components.append(circ_info)
@@ -369,7 +377,6 @@ class circDraw:
                 start = tail
                 end = 360*(ran)/self.__circ_ran + start
                 tail = end
-                # def __draw_ring(self, ax, start, end, color, kind='exon'):
                 self.__draw_ring(ax, start, end, exon[4], kind=exon[2])
                 for mod in exon[5]:
                     mod_start = (end - start)*(mod[0] - low)/ran + start
@@ -385,7 +392,7 @@ class circDraw:
                                 r += 0.05
                             else:
                                 r += 0
-                        self.__draw_mod(ax, mod_start, mod_r, kind=mod_name)
+                        self.__draw_mod(ax, (mod_start+mod_end)/2, mod_r, kind=mod_name)
 
                     if mod_name in ['mre', 'rbp', 'orf']:
                         try:

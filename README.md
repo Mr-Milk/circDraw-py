@@ -1,7 +1,7 @@
 # circDraw-py
 [![PyPI version](https://badge.fury.io/py/circDraw.svg)](https://badge.fury.io/py/circDraw)
 
-This is a stand alone project which extends the power of [circDraw](https://www.circdraw.com/) service to command line users. To better connect with the upsteam pipline, we create a python3 package for generating publication level circular RNA with emphasis on the best way to display backsplite sites and integrate epigenomic/genetic information. And to further convenience users benefit from our circDraw webservice directly from command line, an uploading command line inferface is also integrated into this package and can be revoked from terminal. Overall, this repo contains the following:
+This is a stand alone project which extends the power of [circDraw](https://www.circdraw.com/) service. To better connect with the upsteam pipline, we create a python3 package for generating publication quality visualization of circRNA with internal structures and modifications/functional elements information. And to access circDraw webservice without a browser, a command line inferface is integrated into for you to submit jobs in shell. Overall, this repo contains the following:
 
 1. Python package for circDraw [visualization](https://github.com/Mr-Milk/circDraw-py/blob/master/README.md#usage-draw-with-circdraw)
 2. circDraw [upload command line tool](https://github.com/Mr-Milk/circDraw-py/blob/master/README.md#usage-upload-to-circdraw-webservice) for webservice
@@ -61,21 +61,20 @@ mod_palette = {'m6a': '#E98B2A',
 cd.set_mod_palette(mod_palette)
 
 # draw backsplicing site on chromosome region
-cd.circ_on_chr('Your file')
+cd.circ_on_chr('/path/to/file')
 
 # draw modifications on circRNA
-cd.mod_on_circ('Your file')
+cd.mod_on_circ('/path/to/file')
 ```
 
 <p align="center">
 <img src='/src/circDraw.png' width='85%'>
-
 <img src='/src/hsa_circ_0001.png' width='65%'>
 </p>
 
-### API
+### Method
 
-##### circ_on_chr
+#### circ_on_chr
 
 ```python
 circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, size=(10, 5))
@@ -87,7 +86,6 @@ circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, siz
     
   - | Start | End  | Type | Name | Color (Optional) |
     | ----- | ---- | ---- | ---- | ---------------- |
-    |       |      |      |      |                  |
   
   - Start < End
   
@@ -103,7 +101,7 @@ circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, siz
 
 - Size: (Length, Width) the size of the plot.
 
-##### mod_on_circ
+#### mod_on_circ
 
 ```python
 circDraw.mod_on_circ(self, file, dpi=100, save='png', show=True, size=(7, 7), sep_mod=False)
@@ -115,7 +113,6 @@ circDraw.mod_on_circ(self, file, dpi=100, save='png', show=True, size=(7, 7), se
 
   - | Start | End  | Type | Name | Color (Optional) |
     | ----- | ---- | ---- | ---- | ---------------- |
-    |       |      |      |      |                  |
 
   - Start < End
 
@@ -133,7 +130,7 @@ circDraw.mod_on_circ(self, file, dpi=100, save='png', show=True, size=(7, 7), se
 
 - sep_mod: Bool, prevent the modifications from overlapping if set **True**.
 
-##### set_palette
+#### set_palette
 
 ```python
 circDraw.set_palette(palette)
@@ -141,7 +138,7 @@ circDraw.set_palette(palette)
 
 A list of colors, the length of the list must bigger than 5.
 
-##### set_mod_palette
+#### set_mod_palette
 
 ```python
 circDraw.set_mod_palette(palette)
@@ -177,9 +174,8 @@ $ circDraw-upload -f test_circfile.bed -t BED -s human-hg19 -f test_circfile.bed
 #### 2. Upload file with init file
 circDraw-upload also supports upload file from one init file to avoid tedious typing through command line. You can specify the uploaded filename, file type and its origin species in a single csv file. The cvs file should follow the following format with "," seperating each column:
 
-Upload filename | Upload file type | Origin species
---- | --- | ---
- | | 
+| Upload filename | Upload file type | Origin species |
+| --- | --- | --- |
 
 __Note__: Currently circDraw only supports limited filetypes and species, they are specified in the following table:
 - Supported file types:

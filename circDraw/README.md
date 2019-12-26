@@ -1,11 +1,18 @@
-# circDraw
+# circDraw-py
 [![PyPI version](https://badge.fury.io/py/circDraw.svg)](https://badge.fury.io/py/circDraw)
 
-A python package for circDraw visualization
+This is a stand alone project which extends the power of [circDraw](https://www.circdraw.com/) service.
 
 
+### Dependency
+- [Matplotlib](https://matplotlib.org/) 3.1.2
+- [Numpy](https://numpy.org/) 1.18.0
+- [Colour](https://pypi.org/project/colour/) 0.1.5
+- [Requests](https://pypi.org/project/requests/2.7.0/) 2.22.0
 
-## Usage
+
+## Usage: Draw with circDraw
+CircDraw provides python package to use when drawing circular RNA with the emphasis on backspliting sites visulization and epigenetic marker display. Import `circDraw` class via your favourite python3 interpreter or enbed it inside a script to use the drawing function.
 
 ```python
 from circDraw import circDraw
@@ -28,17 +35,20 @@ mod_palette = {'m6a': '#E98B2A',
 cd.set_mod_palette(mod_palette)
 
 # draw backsplicing site on chromosome region
-cd.circ_on_chr('Your file')
+cd.circ_on_chr('/path/to/file')
 
 # draw modifications on circRNA
-cd.mod_on_circ('Your file')
+cd.mod_on_circ('/path/to/file')
 ```
 
+<p align="center">
+<img src='/src/circDraw.png' width='85%'>
+<img src='/src/hsa_circ_0001.png' width='65%'>
+</p>
 
+### Method
 
-### API
-
-##### circ_on_chr
+#### circ_on_chr
 
 ```python
 circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, size=(10, 5))
@@ -50,7 +60,6 @@ circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, siz
     
   - | Start | End  | Type | Name | Color (Optional) |
     | ----- | ---- | ---- | ---- | ---------------- |
-    |       |      |      |      |                  |
   
   - Start < End
   
@@ -66,7 +75,7 @@ circDraw.circ_on_chr(file, title='circDraw', dpi=300, save='png', show=True, siz
 
 - Size: (Length, Width) the size of the plot.
 
-##### mod_on_circ
+#### mod_on_circ
 
 ```python
 circDraw.mod_on_circ(self, file, dpi=100, save='png', show=True, size=(7, 7), sep_mod=False)
@@ -78,7 +87,6 @@ circDraw.mod_on_circ(self, file, dpi=100, save='png', show=True, size=(7, 7), se
 
   - | Start | End  | Type | Name | Color (Optional) |
     | ----- | ---- | ---- | ---- | ---------------- |
-    |       |      |      |      |                  |
 
   - Start < End
 
@@ -96,7 +104,7 @@ circDraw.mod_on_circ(self, file, dpi=100, save='png', show=True, size=(7, 7), se
 
 - sep_mod: Bool, prevent the modifications from overlapping if set **True**.
 
-##### set_palette
+#### set_palette
 
 ```python
 circDraw.set_palette(palette)
@@ -104,7 +112,7 @@ circDraw.set_palette(palette)
 
 A list of colors, the length of the list must bigger than 5.
 
-##### set_mod_palette
+#### set_mod_palette
 
 ```python
 circDraw.set_mod_palette(palette)
@@ -112,3 +120,8 @@ circDraw.set_mod_palette(palette)
 
 A dictionary of colors match with the modification. You can change any one of the modification colors.
 
+
+## More information
+This a part of circDraw project. Please visit our [Contact](https://www.circdraw.com/information/about) page if you have any questions.
+
+**Copyright**: Qu Lab, School of Life Science, Sun Yat-sen University, Guangzhou, CHINA.
