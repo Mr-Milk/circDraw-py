@@ -42,8 +42,8 @@ cd.mod_on_circ('/path/to/file')
 ```
 
 <p align="center">
-<img src='/src/circDraw.png' width='85%'>
-<img src='/src/hsa_circ_0001.png' width='65%'>
+<img src='https://github.com/Mr-Milk/circDraw-py/blob/master/src/circDraw.png' width='85%'>
+<img src='https://github.com/Mr-Milk/circDraw-py/blob/master/src/hsa_circ_0001.png' width='65%'>
 </p>
 
 ### Method
