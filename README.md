@@ -144,9 +144,10 @@ circDraw.set_mod_palette(palette)
 A dictionary of colors match with the modification. You can change any one of the modification colors.
 
 
-
+<center><img style="center" src="https://img.icons8.com/ios-filled/100/000000/console.png"></center>
 
 ## Usage: Upload to circDraw webservice
+
 ### Upload on command line
 #### 1. Upload files with parameters
 - Single upload file
