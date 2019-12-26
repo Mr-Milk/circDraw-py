@@ -33,6 +33,8 @@ bash install.sh
 - Requests
 
 
+<hr>
+
 
 ## Usage: Draw with circDraw
 
@@ -144,7 +146,9 @@ circDraw.set_mod_palette(palette)
 A dictionary of colors match with the modification. You can change any one of the modification colors.
 
 
-<center><img style="center" src="https://img.icons8.com/ios-filled/100/000000/console.png"></center>
+
+
+<img algin="center" src="src/terminal.png">
 
 ## Usage: Upload to circDraw webservice
 
