@@ -147,8 +147,9 @@ A dictionary of colors match with the modification. You can change any one of th
 
 
 
-
-<img algin="center" src="src/terminal.png">
+<p align="center">
+<img src="src/terminal.png" width="20%">
+</p>
 
 ## Usage: Upload to circDraw webservice
 
