@@ -17,7 +17,7 @@ pip3 install circDraw
 ```
 ### Install via source code
 
-Clone the github repo or unzip the source code, run the following command at the root of 'circDraw-py' directory:
+Clone the github repo or unzip the source code, run the following command at the root of `circDraw-py` directory:
 
 ```shell
 bash install.sh

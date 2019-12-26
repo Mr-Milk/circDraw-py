@@ -1,11 +1,18 @@
 import setuptools
+from distutils.util import convert_path
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+
+circDraw_main_ns = {}
+circDraw_ver_path = convert_path('version.py')
+with open(circDraw_ver_path) as circDraw_ver_file:
+    exec(circDraw_ver_file.read(), circDraw_main_ns)
+
 setuptools.setup(
     name="circDraw",
-    version="0.1.0",
+    version=circDraw_main_ns['__version__'],
     author="Yimin Zheng, Tianqin Li",
     author_email="zym.zym1220@gmail.com, jacklitianqin@gmail.com",
     description="A python package for circDraw visualization and server command line interface",

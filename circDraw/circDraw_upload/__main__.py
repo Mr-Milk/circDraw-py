@@ -1,5 +1,6 @@
 import sys
 from .upload import upload_function
+from .version import __version__
 #from .draw import circDraw
 import os
 import argparse
@@ -22,6 +23,9 @@ def main():
 
 
     args = parser.parse_args()
+    dict_args = vars(args)
+    if not any(list(dict_args.values())):
+        exit("Welcome to use circDraw-upload (" + __version__ + ")!")
     if args.initfile:
         try:
             if args.file or args.type or args.species:
