@@ -146,7 +146,7 @@ circDraw.set_mod_palette(palette)
 A dictionary of colors match with the modification. You can change any one of the modification colors.
 
 
-
+<br><br>
 <p align="center">
 <img src="src/terminal.png" width="20%">
 </p>
