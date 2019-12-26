@@ -26,11 +26,11 @@ bash install.sh
 
 
 ### Dependency
-- Python3.X
-- Matplotlib
-- Numpy
-- Colour
-- Requests
+- Python 3.6.5
+- [Matplotlib](https://matplotlib.org/) 3.1.2
+- [Numpy](https://numpy.org/) 1.18.0
+- [Colour](https://pypi.org/project/colour/) 0.1.5
+- [Requests](https://pypi.org/project/requests/2.7.0/) 2.22.0
 
 
 <p align="center">
