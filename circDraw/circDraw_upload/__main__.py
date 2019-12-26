@@ -13,6 +13,9 @@ def main():
     #### Upload parameter parse
     parser = argparse.ArgumentParser(description="Upload command line interface for circDraw web server.")
 
+    # version
+    parser.add_argument("-v", "--version", action="store_true", help="Version of the package")
+
     # manually
     parser.add_argument("-f", "--file", action='append', help="Filename you want to upload.")
     parser.add_argument("-t", "--type", action='append', help="Filetype of your file, circDraw currently supports {}. Names of the selected file type should be exactly matched.".format(filetype_box), choices=filetype_box)
@@ -26,6 +29,9 @@ def main():
     dict_args = vars(args)
     if not any(list(dict_args.values())):
         exit("Welcome to use circDraw-upload (" + __version__ + ")!")
+    
+    if args.version:
+        exit("Version: " +  __version__)
     if args.initfile:
         try:
             if args.file or args.type or args.species:
