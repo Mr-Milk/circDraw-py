@@ -38,7 +38,7 @@ bash install.sh
 </p>
 
 ## Usage: Draw with circDraw
-CircDraw provides python package to use when drawing circular RNA with the emphasis on backspliting sites visulization and epigenetic/SNP marker display. Import `circDraw` class via your favourite python3 interpretor or enbed it inside a script to use the drawing function.
+CircDraw provides python package to use when drawing circular RNA with the emphasis on backspliting sites visulization and epigenetic/SNP marker display. Import `circDraw` class via your favourite python3 interpreter or enbed it inside a script to use the drawing function.
 
 ```python
 from circDraw import circDraw
