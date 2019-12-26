@@ -33,6 +33,8 @@ bash install.sh
 - Requests
 
 
+<hr>
+
 
 ## Usage: Draw with circDraw
 
@@ -146,7 +148,10 @@ A dictionary of colors match with the modification. You can change any one of th
 
 
 
+<img algin="center" src="src/terminal.png">
+
 ## Usage: Upload to circDraw webservice
+
 ### Upload on command line
 #### 1. Upload files with parameters
 - Single upload file
