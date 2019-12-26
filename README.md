@@ -33,8 +33,9 @@ bash install.sh
 - Requests
 
 
-<hr>
-
+<p align="center">
+<img src="src/drawing.png" width="20%">
+</p>
 
 ## Usage: Draw with circDraw
 
