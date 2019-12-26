@@ -14,6 +14,8 @@ def main():
     dict_args = vars(args)
     if not any(list(dict_args.values())):
         exit("Welcome to use circDraw (" + __version__ + ")!")
+    else:
+        exit("Please perform drawing inside python3 to gain the best usage experience!")
 
 if __name__ == '__main__':
     main()
